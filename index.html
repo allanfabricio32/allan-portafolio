@@ -9,17 +9,31 @@
 </head>
 
 
-
-
 <!-- Botón de iniciar sesión -->
-<div style="text-align: center; margin: 20px 0;">
+<div style="text-align: left; margin: 20px 0;">
     <button onclick="window.location.href='http://localhost:8080/pagina-completa-html-css/registro.php'" 
-            style="background-color: #28a745; color: white; border: none; padding: 10px 20px; 
-                   border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: 500; 
-                   transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            style="
+                background: linear-gradient(135deg, #28a745, #1fa234);
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 15px rgba(0,0,0,0.3)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 10px rgba(0,0,0,0.2)';">
         Iniciar Sesión
     </button>
 </div>
+
+
+
+
+
 
 
 
