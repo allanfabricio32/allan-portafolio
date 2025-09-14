@@ -1,0 +1,1154 @@
+/* codigo botones genero y plataforma*/
+.game-card {
+  display: none; /* todas ocultas al inicio */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para la barra de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los botones */
+    margin-bottom: 20px; /* Espacio debajo de la barra de navegación */
+}
+
+/* Estilo para los botones de plataformas */
+.platform-btn {
+    background-color: #af544c; /* Color de fondo verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.platform-btn:hover {
+    background-color: #d13e15; /* Color verde más oscuro al pasar el mouse */
+}
+
+/* Estilos para las tarjetas */
+.game-card {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ac1a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background-color: #c12222;
+}
+/* Estilo para el botón de Iniciar Sesión */
+.login-btn {
+    background-color: #007BFF; /* Color azul de fondo */
+    color: white; /* Texto blanco */
+    padding: 12px 30px; /* Espaciado más grande */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none;
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto hover para el botón de Iniciar Sesión */
+.login-btn:hover {
+    background-color: #0056b3; /* Color azul más oscuro */
+    transform: scale(1.05); /* Escala el botón ligeramente al pasar el ratón */
+}
+
+/* Efecto de enfoque (cuando el botón es seleccionado) */
+.login-btn:focus {
+    outline: none; /* Quitar el borde predeterminado de enfoque */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Agregar sombra suave al enfocar */
+}
+/* Estilo para los botones de plataforma */
+.platform-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.platform-btn {
+    background-color: #a71313;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.platform-btn:hover {
+    background-color: #c01d1d;
+}
+
+/* Estilo para las tarjetas */
+.game-card {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ocultar tarjetas por defecto */
+.pc, .xbox, .ps5 {
+    display: none;
+}
+
+
+
+
+
+
+
+/* Modal Overlay */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.modal-content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Fondo general */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f3460, #53354a);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #e94560;
+    margin: 0;
+}
+
+/* Botón de iniciar sesión */
+.login-btn {
+    background: linear-gradient(135deg, #6a4dc4, #4e88d8);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #4e88d8, #6a4dc4);
+}
+
+/* Barra de navegación */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.platform-btn {
+    background: #16213e;
+    border: 2px solid #e94560;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.platform-btn:hover {
+    background: #e94560;
+    color: #16213e;
+}
+
+/* Sección de juegos */
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-card {
+    background: #0f3460;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #e94560;
+}
+
+.game-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #e94560;
+}
+
+.game-card p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.game-card button {
+    background: linear-gradient(135deg, #6a4dc4, #4e88d8);
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.game-card button:hover {
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    width: 80%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+/* Modal para inicio de sesión */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #6a4dc4, #4e88d8);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+
+#loginButton {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#loginButton.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+
+/* Asegúrate de agregar esto en tu archivo styles.css */
+
+.platform-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.platform-logo {
+    width: 30px; /* Ajusta este valor según el tamaño que desees */
+    height: 30px;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+
+
+
+
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/* Colores de fondo por plataforma */
+body.pc-selected {
+    background-color: #1a1a1a; /* Color de fondo oscuro para PC */
+}
+
+body.ps5-selected {
+    background-color: #003f87; /* Azul de PS5 */
+}
+
+body.xbox-selected {
+    background-color: #107c10; /* Verde de Xbox */
+}
+
+/* Estilo de los botones */
+.platform-btn {
+    background-color: #333; /* Color base para los botones */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.platform-btn:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+body {
+    background-image: url('imagenes/fondo\ depantalla.avif'); /* Ruta de tu imagen */
+    background-size: cover;  /* La imagen cubrirá toda la pantalla */
+    background-position: center;  /* La imagen se centrará en la pantalla */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+}
+
+
+
+
+.platform-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.platform-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .games {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .games {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.game-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+.free-games-btn {
+    text-decoration: none; /* Evita subrayar el enlace */
+}
+
+.platform-btn {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espaciado */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.platform-btn:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+
+
+
+/* Estilo general del botón de "Juegos Gratis" */
+.free-games-btn {
+    text-decoration: none; /* Evita el subrayado */
+}
+
+.free-games-btn button {
+    background-color: #ff6f61; /* Un color de fondo atractivo */
+    color: white; /* Texto blanco */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 12px 24px; /* Espaciado interno (padding) */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* El cursor será una mano */
+    transition: background-color 0.3s, transform 0.3s; /* Efecto suave en hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Arial', sans-serif; /* Tipografía limpia */
+}
+
+/* Efecto hover para el botón */
+.free-games-btn button:hover {
+    background-color: #ff3b2a; /* Cambio de color de fondo al pasar el ratón */
+    transform: translateY(-3px); /* Sube un poco el botón */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Aumenta la sombra en hover */
+}
+
+/* Efecto cuando el botón es presionado */
+.free-games-btn button:active {
+    transform: translateY(1px); /* Hace que el botón se "presione" al hacer clic */
+}
+
+
+
+
+
+
+
+.redirect-btn-container {
+    text-align: center; /* Centra el botón */
+    margin-top: 20px;
+}
+
+.redirect-btn {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Texto blanco */
+    padding: 15px 30px; /* Espaciado */
+    font-size: 18px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Mano al pasar sobre el botón */
+    transition: background-color 0.3s ease;
+}
+
+.redirect-btn:hover {
+    background-color: #45a049; /* Fondo más oscuro al pasar el mouse */
+}
+/* Contenedor para centrar el botón */
+.redirect-btn-container {
+    text-align: center; /* Centra el botón */
+    margin-top: 40px; /* Espacio por encima */
+}
+
+/* Estilo del botón */
+.redirect-btn {
+    background: linear-gradient(45deg, #6a1b9a, #2196f3); /* Gradiente entre morado y azul */
+    color: white; /* Color del texto blanco */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    padding: 20px 50px; /* Espaciado interior */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados completos */
+    cursor: pointer; /* Mano al pasar sobre el botón */
+    transition: all 0.3s ease-in-out; /* Transición suave para efectos */
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.4); /* Sombra suave azul */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    outline: none; /* Eliminar el borde azul en algunos navegadores */
+}
+
+
+
+
+
+
+
+
+
+/* Estilo para la nota de suscripción */
+.subscribe-note {
+    background-color: #f4f4f4;  /* Fondo gris claro */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+.subscribe-note p {
+    font-size: 18px;  /* Aumentamos el tamaño del texto */
+    color: #333;  /* Color oscuro para el texto */
+    font-weight: bold;  /* Hacer el texto más visible */
+}
+
+.subscribe-btn {
+    background-color: #ff0000;  /* Rojo típico de YouTube */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;  /* Resaltar el texto del botón */
+    transition: background-color 0.3s ease;  /* Efecto suave al pasar el mouse */
+}
+
+.subscribe-btn:hover {
+    background-color: #cc0000;  /* Rojo más oscuro al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+
+/* Estilo para la nota de advertencia */
+.download-warning {
+    background-color: #ffcc00;  /* Fondo amarillo para destacar */
+    color: #333;  /* Texto oscuro */
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+.download-warning p {
+    margin: 0;  /* Eliminar margen del párrafo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Posicionamiento de los botones en la esquina inferior */
+.genre-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo para los botones de géneros */
+.genre-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.genre-btn:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor del botón */
+.redirect-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo inicial para el botón */
+.redirect-btn {
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+}
+
+/* Efecto al pasar el ratón */
+.redirect-btn:hover {
+    background-color: #0056b3; /* Cambia el color de fondo */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor del botón */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo para el botón con imagen */
+.image-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para la imagen dentro del botón */
+.button-image {
+    width: 100px; /* Puedes ajustar el tamaño */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.image-button:hover .button-image {
+    transform: scale(1.1); /* Aumenta un poco el tamaño de la imagen cuando el mouse pasa por encima */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo básico para pantallas grandes (como en desktop) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media query para pantallas pequeñas (como en dispositivos móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .game-card {
+        width: 100%;  /* Hacer que las tarjetas de juegos ocupen todo el ancho */
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    .subscribe-note {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TRAILER GTA 6 */
+.trailer-container {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* responsiva para movile*/
+
+
+
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Tarjetas de juegos */
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.game-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.game-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.game-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu.active {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .games {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Botones de plataforma con nuevo color */
+.platform-btn {
+background: linear-gradient(135deg, #00ff7f, #00cc55);
+
+
+ /* Gradiente naranja a rosa */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+.platform-btn:hover {
+    background: linear-gradient(135deg, #dd2476, #ff512f); /* Invierte el gradiente al pasar el mouse */
+    transform: scale(1.1); /* Sube ligeramente el botón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
